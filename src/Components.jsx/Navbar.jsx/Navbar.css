@@ -1,0 +1,28 @@
+.navbar{
+position: fixed;
+top: 0;
+height: 80px;
+width: 100%;
+padding: 20px;
+display: flex;
+justify-content: space-between;
+background-color: #111;
+}
+.input{
+    position: fixed;
+    right: 60px;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 10px;
+    border: none;
+}
+.logo{
+    position: fixed;
+    left: 20px;
+    width: 80px;
+}
+.avatar{
+    position: fixed;
+    right: 20px;
+    width: 30px;
+}
