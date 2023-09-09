@@ -1,6 +1,8 @@
 .banner{
    
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     height: 500px;
     color: white;
     margin-top: 30px;
@@ -34,7 +36,7 @@
     background-color:#e6e6e6 ;
 }
 .description{
-width: 45rem;
+/* width: 45rem; */
 line-height: 1.3;
 padding-top: 1rem;
 font-size: 1rem;
@@ -44,7 +46,12 @@ max-width: 360px;
 .fade_bottom{
     height: 19.4rem;
     background-image: linear-gradient(180deg, transparent,rgba(37,37,37,.61),#111);
-   
-    
-    
-}
+   }
+
+   @media screen and (max-width:500px){
+    .description{
+        font-size:12px;
+    }
+    .title{
+        font-size: 1.5rem;}
+   }
