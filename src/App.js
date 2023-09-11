@@ -6,6 +6,9 @@ import Rowpost from "./Components.jsx/Rowpost/Rowpost";
 import { action, originals, upcoming, topRated, movieSearch } from "./Urls";
 import { useState } from "react";
 import { API_KEY, baseUrl } from "./Constants/Constants";
+import Login from "./Components.jsx/Login/Login";
+import Login2 from "./Components.jsx/Login/Login2";
+import Signup from "./Components.jsx/Sugnup/Signup";
 function App() {
   const [message, setMessage] = useState("");
   // const[searchValue, setSearchValue]=useState('');
@@ -18,7 +21,7 @@ function App() {
     <div className="App">
       <Navbar sendData={receiveMessageFromChild} />
       <Banner />
-      <Rowpost url={originals} title="Netflix Orginals" />
+      <Rowpost url={originals} title="Netflix Orginals" /> 
       <Rowpost url={action} title="Action Movies" isSmall />
       <Rowpost url={upcoming} title="Upcoming" isSmall />
       <Rowpost url={topRated} title="Top Rated" isSmall />
@@ -26,7 +29,10 @@ function App() {
       <Rowpost
         url={`${baseUrl}/search/movie?query=${message}&api_key=${API_KEY}`}
         title="Search Result"
-      />
+      /> 
+      {/* <Login/> */}
+      {/* <Signup/> */}
+      {/* <Login2/> */}
     </div>
   );
 }

@@ -8,7 +8,7 @@ import context from "../../context/context";
 function Navbar({ sendData }) {
   const [search, setsearch] = useState("");
   const [datas, setdatas] = useState([]);
-  
+  const user =localStorage.getItem('email');
   
   const handleClick = () => {
   sendData(search);
@@ -24,6 +24,7 @@ function Navbar({ sendData }) {
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1920px-Netflix_2015_logo.svg.png"
         alt="netflixlogo"
       />
+      <p className="loginUser">{user}</p>
       <input
         className="input"
         onChange={(e) => {

@@ -1,0 +1,144 @@
+.loginBg{
+    /* background-image:"https://assets.nflxext.com/ffe/siteui/vlv3/42df4e1f-bef6-499e-87ff-c990584de314/5e7c383c-1f88-4983-b4da-06e14c0984ba/IN-en-20230904-popsignuptwoweeks-perspective_alpha_website_large.jpg"; */
+height: 100%;
+background-size: cover;
+background-position: center;
+
+}
+.loginLogo{
+margin-left: 180px;
+    
+   max-width: 200px;
+    
+}
+.logoDiv{
+    flex: 1;
+}
+.select{
+   margin-right: 2%;
+   padding: 10px 20px;
+   background: none;
+   color: white;
+   font-weight: 700;
+   font-size: 14px;
+   border-radius: 5px;
+   outline: 2px solid white;
+}
+.loginBtn{
+    border-radius: 5px;
+   padding: 10px 30px;
+   background-color:rgb(229,9,20);
+   color: white;
+   border: none;
+   font-weight: 900;
+   font-size: 14px;
+   margin-right: 8%;
+}
+.bgShade{
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.404);
+}
+.LoginHead{
+    padding: 40% 200px 0px 200px;
+    padding-top:10%;
+    text-align: center;
+    color: white;
+    font-size: 3.8rem;
+    font-weight: 800;
+}
+.navContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px;
+    
+}
+.paraOne{
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+.paraTwo{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+.searchArea{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+.emailSearch{
+background: none;
+font-size: 20px;
+padding: 1.1%;
+width: 25%;
+border-color: red;
+border-radius: 5px;
+color: white;
+}
+.emailSearch::placeholder{
+    color: rgb(203, 200, 200);
+}
+.strtedbtn{
+    margin-left: 10px;
+    padding: 1.1% 4%;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 5px;
+    color: white;
+    background-color:rgb(245, 7, 19);
+    border: none;
+}
+.strtedbtn:hover{
+    background-color: rgb(187, 10, 10);
+}
+@media screen and (max-width:1310px) {
+    .LoginHead{
+    padding: 30% 20px 0px 20px;
+      }
+      .loginLogo{
+        margin-left: 40px;}
+        
+}
+@media screen and (max-width:950px) {
+    .LoginHead{
+    font-size: 3rem;
+      
+    }
+    .strtedbtn{
+        font-size: 20px;
+        padding: 1.1% 1%;
+    }
+  }
+    @media screen and (max-width:550px) {
+        .LoginHead{
+        font-size: 1.5rem;
+          }
+          .strtedbtn{
+            font-size: 20px;
+          }
+          .emailSearch{
+            width: 40%;
+          } 
+        .loginLogo{
+          max-width: 80px;
+          }
+          .select{
+           padding: 5px 10px;
+           font-weight: 500;
+            font-size: 10px;
+           }
+         .loginBtn{
+            padding: 5px 10px;
+           font-weight: 700;
+            font-size: 10px;
+            margin-right: 1%;
+            }
+            .paraOne,.paraTwo{
+                font-size: 19px;
+            }
+    }
