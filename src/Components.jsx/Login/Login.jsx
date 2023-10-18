@@ -1,26 +1,43 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { bgimage } from "../../Urls";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
   const [searchMail, setSearchMail] = useState("");
   const [details, setDetails] = useState([]);
+  const navigate = useNavigate();
+  const [loginStatus, setLoginStatus] = useState("");
+  const loginHandler = () => {
+    navigate("/signin");
+  };
+  useEffect(() => {
+    axios.get("http://localhost:5000/data").then((response) => {
+      setDetails(response.data);
+    });
+  }, [searchMail]);
+
   const validate = () => {
     var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (mailFormat.test(searchMail)) {
-      axios.get("http://localhost:5000/data").then((response) => {
+      if (details.some((detal) => detal.email === searchMail)) {
         console.log(details);
-        setDetails(response.data);
-        if (details.some((detal)=>detal.email===searchMail)) {
-          console.log("user Exists");
-        } else{
-          console.log("user not available");
-          localStorage.setItem ('email',searchMail);
-        } 
-      });
+        console.log(searchMail);
+        setLoginStatus("User already Exists");
+      } else {
+        console.log(details);
+        console.log(searchMail);
+        localStorage.setItem("email", searchMail);
+
+        setLoginStatus(`Welcome ${searchMail}`);
+        setTimeout(() => {
+          navigate("/signup");
+        }, 3000);
+      }
+      console.log(details);
       checkcLocalStorage();
-    } else alert("You have entered an invalid email address!");
+    } else setLoginStatus("Entered valid email address!");
   };
   const checkcLocalStorage = () => {};
   const options = ["English", "Hindi"];
@@ -42,7 +59,9 @@ function Login() {
               </option>
             ))}
           </select>
-          <button className="loginBtn">Sign In</button>
+          <button className="loginBtn" onClick={loginHandler}>
+            Sign In
+          </button>
         </div>
 
         <h1 className="LoginHead">
@@ -66,6 +85,7 @@ function Login() {
             Get Started {">"}{" "}
           </button>
         </div>
+        <h1 className="loginStatus">{loginStatus}</h1>
       </div>
     </div>
   );

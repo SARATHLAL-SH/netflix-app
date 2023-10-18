@@ -1,14 +1,14 @@
-import logo from "./logo.svg";
+
 import "./App.css";
+import Rowpost from "./Components.jsx/Rowpost/Rowpost";
 import Navbar from "./Components.jsx/Navbar.jsx/Navbar";
 import Banner from "./Components.jsx/Banner/Banner";
-import Rowpost from "./Components.jsx/Rowpost/Rowpost";
-import { action, originals, upcoming, topRated, movieSearch } from "./Urls";
-import { useState } from "react";
+import { action, originals, upcoming, topRated } from "./Urls";
 import { API_KEY, baseUrl } from "./Constants/Constants";
-import Login from "./Components.jsx/Login/Login";
-import Login2 from "./Components.jsx/Login/Login2";
-import Signup from "./Components.jsx/Sugnup/Signup";
+import { useState } from "react";
+
+
+
 function App() {
   const [message, setMessage] = useState("");
   // const[searchValue, setSearchValue]=useState('');
@@ -19,6 +19,8 @@ function App() {
   console.log(message);
   return (
     <div className="App">
+     
+            
       <Navbar sendData={receiveMessageFromChild} />
       <Banner />
       <Rowpost url={originals} title="Netflix Orginals" /> 
@@ -26,13 +28,12 @@ function App() {
       <Rowpost url={upcoming} title="Upcoming" isSmall />
       <Rowpost url={topRated} title="Top Rated" isSmall />
 
-      <Rowpost
+      <Rowpost 
         url={`${baseUrl}/search/movie?query=${message}&api_key=${API_KEY}`}
-        title="Search Result"
+      
+        title={`${baseUrl}/search/movie?query=${message}&api_key=${API_KEY}`.length > 0 ? "Search Result" : ""}
       /> 
-      {/* <Login/> */}
-      {/* <Signup/> */}
-      {/* <Login2/> */}
+
     </div>
   );
 }

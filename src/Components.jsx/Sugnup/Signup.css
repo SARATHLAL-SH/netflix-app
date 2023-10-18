@@ -1,6 +1,88 @@
-h4{
-    color: white;
+.sigUpWrapper{
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    margin-top: 30px;
+}
+.signupSingin{
+    color: rgb(219, 9, 9);
+    font-weight: 900;
+    cursor: pointer;
+}
+.signupSingin:hover{
+    color: rgb(193, 6, 6);
 }
 .signupEmail{
     cursor: not-allowed;
+}
+.signupContainer{
+    background-color: white;
+    height: 100vh;
+    
+    
+}
+.signupNav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 90px;
+    border-bottom: solid rgb(193, 188, 188) 1px
+}
+.signupLogo{
+    width: 160px;
+    height: 60px;
+}
+.signupMembership{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 40%;
+}
+.signupMembership h2{
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+.signupMembership p{
+    font-size: 22px;
+    text-align: left;
+    font-weight: 700;
+    color: rgb(81, 84, 84);
+}
+.signupName ,.signupPhone,.signupEmail{
+    width: 300px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.signupEmail{
+    margin-top: 30px;
+    color: rgb(117, 3, 3);
+    font-weight: 700;
+    background-color: gray;
+}
+.signupBtn{
+    background-color: rgb(177, 6, 6);
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    font-weight: 700;
+    font-size: 22px;
+}
+.signupBtn:hover{
+    background-color: rgb(147, 11, 11);
+}
+@media screen and (max-width:1080px) {
+    .signupMembership{
+        max-width: 80%;
+        text-align: center;
+    }
+}
+@media screen and (max-width:550px) {
+    .signupMembership h2{
+        font-size: 35px;
+    }
+    .signupMembership p{
+font-size: 10;
+text-align: center;
+    }
 }

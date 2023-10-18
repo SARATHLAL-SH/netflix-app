@@ -1,15 +1,22 @@
+
 .loginBg{
     /* background-image:"https://assets.nflxext.com/ffe/siteui/vlv3/42df4e1f-bef6-499e-87ff-c990584de314/5e7c383c-1f88-4983-b4da-06e14c0984ba/IN-en-20230904-popsignuptwoweeks-perspective_alpha_website_large.jpg"; */
 height: 100%;
 background-size: cover;
 background-position: center;
-
+}
+.loginStatus{
+    color: red;
+    text-align: center;
 }
 .loginLogo{
 margin-left: 180px;
     
    max-width: 200px;
     
+}
+.loginBtn:hover{
+background-color: rgb(170, 8, 8);
 }
 .logoDiv{
     flex: 1;
@@ -39,7 +46,7 @@ margin-left: 180px;
     background-color: rgba(0, 0, 0, 0.404);
 }
 .LoginHead{
-    padding: 40% 200px 0px 200px;
+    padding: 30% 200px 0px 200px;
     padding-top:10%;
     text-align: center;
     color: white;
