@@ -1,8 +1,8 @@
-
+import React from "react";
 import "./App.css";
-import Rowpost from "./Components.jsx/Rowpost/Rowpost";
-import Navbar from "./Components.jsx/Navbar.jsx/Navbar";
-import Banner from "./Components.jsx/Banner/Banner";
+import Rowpost from "./Components/Rowpost/Rowpost";
+import Navbar from "./Components/Navbar/Navbar";
+import Banner from "./Components/Banner/Banner";
 import { action, originals, upcoming, topRated } from "./Urls";
 import { API_KEY, baseUrl } from "./Constants/Constants";
 import { useState } from "react";
